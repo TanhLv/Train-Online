@@ -1,0 +1,74 @@
+﻿@model List<CustomUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+    var tb = TempData["ThanhCong"] as string;
+}
+
+<h1>Users</h1>
+<div class="tbao" data-tbao="@tb"></div>
+<div class="tbl">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>UserName</th>
+                @*<th>FullName</th>
+                <th>Phone</th>*@
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.UserName</td>
+                    @*<td>@item.FullName</td>
+                    <td>@item.PhoneNumber</td>*@
+                    <td>@item.Email</td>
+                    <td>
+                        <ul>
+                            <li>  <a href="javascript:void(0)" class="btn btn-success set-role" data-id="@item.Id">SetRole</a> </li>
+                            <li> <a href="javascript:void(0)" class="btn btn-warning cap-nhat" data-id="@item.Id">Cập nhật</a></li>
+                            <li class="btn btn-danger dele-te">Xóa</li>
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="modal" tabindex="-1" role="dialog">
+</div>
+@section scripts{
+    <script>
+        $('.cap-nhat').off('click').on('click', function () {
+            var id = $(this).attr('data-id');
+            $.get("/User/ViewUpdate?id=" + id, function (response) {
+                $('.modal').html('').html(response);
+                $('.modal').modal('show');
+            })
+        })
+        $('.set-role').off('click').on('click', function () {
+            var id = $(this).attr('data-id');
+            $.get("/User/ViewSetRole?id=" + id, function (response) {
+                $('.modal').html('').html(response);
+                $('.modal').modal('show');
+            })
+        })
+
+        var tb = $('.tbao').attr('data-tbao');
+        if (tb != "") {
+            $.toast({
+                heading: 'Success',
+                text: 'And these were just the basic demos! Scroll down to check further details on how to customize the output.',
+                showHideTransition: 'slide',
+                icon: 'success'
+            })
+        }
+
+    </script>
+}
+

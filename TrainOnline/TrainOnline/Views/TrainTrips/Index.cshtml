@@ -1,0 +1,90 @@
+﻿@model IEnumerable<TrainOnline.Models.TrainTrip>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a class="btn btn-success" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainTripCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartureTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArrivalTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetTrainId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetScheduleId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.ModifiedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.DeleteDate)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainTripCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetTrainId.TrainId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetScheduleId.ScheduleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+         @*   <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeleteDate)
+            </td>*@
+            <td>
+                <a class="btn btn-danger" asp-action="Edit" asp-route-id="@item.TrainTripId">Edit</a> |
+                <a class="btn btn-success" asp-action="Details" asp-route-id="@item.TrainTripId">Details</a> |
+                <a class="btn btn-warning" asp-action="Delete" asp-route-id="@item.TrainTripId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

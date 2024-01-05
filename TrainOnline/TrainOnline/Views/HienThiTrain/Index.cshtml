@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .form {
+        display: none;
+        max-width: 300px;
+    }
+
+        .form.active {
+            display: block;
+        }
+    /* Ẩn tất cả các form trừ form đầu tiên */
+    .form {
+        display: none;
+    }
+
+    /* Kiểu cho các nút button */
+    button {
+        padding: 10px;
+        margin-right: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Kiểu cho các label và input */
+    /* label {
+          display: block;
+          margin-top: 10px;
+
+        } */
+
+    fieldset {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        border-radius: 8px;
+    }
+
+    legend {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 5px;
+    }
+
+    .form label, .form input[type="text"] {
+        display: inline-block;
+        width: 100%;
+    }
+</style>
+
+<body>
+    @*<button onclick="showForm(1)">Tàu 1</button>
+    <button onclick="showForm(2)">Tàu 2</button>
+    <button onclick="showForm(3)">Tàu 3</button>*@
+    
+
+
+    <form class="form" id="form1">
+        <fieldset>
+            <legend>Thông tin lịch trình</legend>
+            <label for="">Form 1</label>
+            <div>
+                <label for="lich-trinh">Lịch trình:</label>
+                <div id="lich-trinh" contenteditable></div>
+            </div>
+            <div>
+                <label for="diem-di">Điểm đi:</label>
+                <div id="diem-di" contenteditable></div>
+            </div>
+            <div>
+                <label for="gio-di">Giờ đi:</label>
+                <div id="gio-di" contenteditable></div>
+            </div>
+        </fieldset>
+    </form>
+
+    <form class="form" id="form2">
+        <fieldset>
+            <legend>Thông tin lịch trình</legend>
+            <label for="">Form 2</label>
+            <div>
+                <label for="lich-trinh">Lịch trình:</label>
+                <div id="lich-trinh" contenteditable></div>
+            </div>
+            <div>
+                <label for="diem-di">Điểm đi:</label>
+                <div id="diem-di" contenteditable></div>
+            </div>
+            <div>
+                <label for="gio-di">Giờ đi:</label>
+                <div id="gio-di" contenteditable></div>
+            </div>
+        </fieldset>
+    </form>
+
+    <form class="form" id="form3">
+        <fieldset>
+            <legend>Thông tin lịch trình</legend>
+            <label for="">Form 3</label>
+            <div>
+                <label for="lich-trinh">Lịch trình:</label>
+                <div id="lich-trinh" contenteditable></div>
+            </div>
+            <div>
+                <label for="diem-di">Điểm đi:</label>
+                <div id="diem-di" contenteditable></div>
+            </div>
+            <div>
+                <label for="gio-di">Giờ đi:</label>
+                <div id="gio-di" contenteditable></div>
+            </div>
+        </fieldset>
+        
+    </form>
+
+    <script>
+        function showForm(id) {
+            var forms = document.getElementsByClassName('form');
+            for (var i = 0; i < forms.length; i++) {
+                forms[i].classList.remove('active');
+            }
+            document.getElementById('form' + id).classList.add('active');
+        }
+    </script>
+</body>
+

@@ -1,0 +1,108 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-TrainOnline-81149784-7364-44db-99d7-9fd21ffb8f5b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\codeql\codeql-config.yml" />
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\CONTRIBUTING.md" />
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\dependabot.yml" />
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v3.1-x.md" />
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\ISSUE_TEMPLATE\feature-request-for-adminlte-v4-x.md" />
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\workflows\ci.yml" />
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\workflows\codeql.yml" />
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\workflows\docs.yml" />
+    <None Include="wwwroot\AdminLTE\AdminLTE\.github\workflows\lint.yml" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_alerts.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_background-variant.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_border-radius.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_buttons.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_center-block.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_clearfix.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_forms.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_gradients.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_grid-framework.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_grid.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_hide-text.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_image.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_labels.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_list-group.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_nav-divider.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_nav-vertical-align.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_opacity.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_pagination.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_panels.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_progress-bar.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_reset-filter.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_reset-text.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_resize.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_responsive-visibility.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_size.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_tab-focus.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_table-row.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_text-emphasis.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_text-overflow.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\1312249659bbfaed97ebc9c4fe4615ab409979f2\_vendor-prefixes.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_alerts.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_badges.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_breadcrumbs.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_button-groups.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_buttons.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_carousel.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_close.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_code.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_component-animations.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_dropdowns.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_forms.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_grid.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_input-groups.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_jumbotron.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_labels.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_list-group.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_media.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_mixins.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_modals.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_navbar.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_navs.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_normalize.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_pager.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_pagination.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_panels.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_popovers.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_print.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_progress-bars.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_responsive-embed.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_responsive-utilities.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_scaffolding.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_tables.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_thumbnails.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_tooltip.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_type.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_utilities.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_variables.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c131d579e72184e91f426d1f22b65b5f0ae1d20f\_wells.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c578ac96aea90b3ef48d5ddbbb0ad284ee4fb7fd\bootstrap.scssc" />
+    <None Include="wwwroot\traveler\.sass-cache\c578ac96aea90b3ef48d5ddbbb0ad284ee4fb7fd\style.scssc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.21" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.21" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\style.css\" />
+  </ItemGroup>
+
+</Project>

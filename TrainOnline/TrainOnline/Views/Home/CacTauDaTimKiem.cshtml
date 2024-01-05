@@ -1,0 +1,212 @@
+﻿@using TrainOnline.DTO;
+@model List<HienThiChuyenTauDTO>;
+@{
+    var query = from m in Model
+                group m by new { m.TrainId, m.TrainNumber, m.GioDi, m.GioDen } into groupted
+                select new
+                {
+                    groupted.Key,
+                    LoTrinh = groupted.ToList()
+                };
+}
+@{
+    ViewData["Title"] = "CacTauDaTimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    
+        .datve{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        }
+    
+
+        .datve button {
+            background-color: #09C6AB;
+            color: black;
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        hr {
+  width: 50%;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+}
+
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="time"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+        background-color: #36b03c;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #2a8d2a;
+        }
+</style>
+
+
+<body>
+<div class="container">
+    <div class="row">
+    @foreach (var item in query)
+    {
+            <div class="col-md-4" style="margin-top: 40px;">
+            <div class="card">
+                <img class="card-img-top" style="max-width:70%" src="https://th.bing.com/th/id/R.dd46c3e849980f81a673da6a3b07f69e?rik=MXTcf300IZRY3A&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_207240.png&ehk=wCVYOu0eqF1r%2b%2bZF7chpliVFEAV47PLRQvbGMeMQkxs%3d&risl=&pid=ImgRaw&r=0" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-text">Tàu số: @item.Key.TrainId</h5>
+                    <h5>Thời gian đi: @item.Key.GioDi</h5>
+                    <h5>Thời gian đến: @item.Key.GioDen</h5>
+                    <h5>Lộ trình:</h5>
+                    <ul>
+                        @foreach(var lt in item.LoTrinh)
+                        {
+                            <li>@lt.TenGaDi - @lt.TenGaDen</li>
+                        }
+                        
+                    </ul>
+                        <label style="font-size: 18px;">
+                            <input type="radio" name="option" value="option1">
+                            Chọn tàu
+                        </label>
+                </div>
+            </div>
+            
+        </div>
+    }
+</div>
+</div>
+   
+
+<hr />
+    <form method="GET">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="name">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number"><br><br>
+        <label for="name">Email::</label>
+        <input type="text" id="email" name="email"><br><br>
+        <label for="age">Tuổi:</label>
+        <input type="text" id="age" name="age"><br><br>
+    </form>
+
+    <div class="datve">
+        <button id="datve-btn">Đặt vé</button>
+    </div>
+    <hr />
+   @* <script>
+        // Lấy đối tượng của nút "Đặt vé"
+        var datveBtn = document.getElementById("datve-btn");
+
+        // Thêm sự kiện khi người dùng ấn nút "Đặt vé"
+        datveBtn.addEventListener("click", function () {
+            // Lấy giá trị của radio button được chọn
+            var selectedOption = "";
+            var radioButtons = document.getElementsByName("option");
+            for (var i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    selectedOption = radioButtons[i].value;
+                    break;
+                }
+            }
+
+            // Kiểm tra điều kiện đặt vé thành công
+            if (selectedOption !== "") {
+                alert("Đặt vé thành công!");
+                location.href = "/HienThiVeTau/Index";
+                // Thực hiện các tác vụ cần thiết sau khi đặt vé thành công
+            } else {
+                alert("Vui lòng chọn tàu để đặt vé!");
+            }
+        });
+    </script>*@
+<script>
+    // Lấy đối tượng của nút "Đặt vé"
+    var datveBtn = document.getElementById("datve-btn");
+
+// Thêm sự kiện khi người dùng ấn nút "Đặt vé"
+    datveBtn.addEventListener("click", function () {
+    // Lấy giá trị của các trường thông tin
+    var name = document.getElementById("name").value;
+    var phone_number = document.getElementById("phone_number").value;
+    var email = document.getElementById("email").value;
+    var age = document.getElementById("age").value;
+
+    // Kiểm tra xem các trường thông tin đã được nhập đầy đủ hay chưa
+    if (name === "" || phone_number === "" || email === "" || age === "") {
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+    }
+
+    // Lấy giá trị của radio button được chọn
+    var selectedOption = "";
+    var radioButtons = document.getElementsByName("option");
+    for (var i = 0; i < radioButtons.length; i++) {
+        if (radioButtons[i].checked) {
+            selectedOption = radioButtons[i].value;
+            break;
+        }
+    }
+
+    // Kiểm tra điều kiện đặt vé thành công
+    if (selectedOption !== "") {
+        alert("Đặt vé thành công!");
+        location.href = "/HienThiVeTau/Index";
+        // Thực hiện các tác vụ cần thiết sau khi đặt vé thành công
+    } else {
+        alert("Vui lòng chọn tàu để đặt vé!");
+    }
+   });
+ </script>
+    
+</body>
+
+
+

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<TrainOnline.Models.Ticket>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TicketCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalTicketPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainTripId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetPassengerInformation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetSeatId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetDepartureStation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetArrivalStation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeleteDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalTicketPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainTripId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetPassengerInformation.PassengerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetSeatId.SeatId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetDepartureStation.StationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetArrivalStation.StationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeleteDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TicketId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TicketId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TicketId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

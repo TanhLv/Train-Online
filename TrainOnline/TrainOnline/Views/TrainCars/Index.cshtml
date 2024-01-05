@@ -1,0 +1,83 @@
+﻿@model IEnumerable<TrainOnline.Models.TrainCar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainCarNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetTrainId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GetStatusId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeleteDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainCarNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetTrainId.TrainId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetTypeId.TypeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GetStatusId.StatusId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeleteDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TrainCarId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TrainCarId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TrainCarId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
